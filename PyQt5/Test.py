@@ -98,7 +98,7 @@ class Window(QtWidgets.QMainWindow):
 #        cal = QtWidgets.QCalendarWidget(self)
 #        cal.move(500,200)
 #        cal.resize(200,200)
-#
+##
         self.show()
 
     def editor_close(self):
