@@ -81,11 +81,8 @@ class Window(QtWidgets.QMainWindow):
         self.styleChoice = QtWidgets.QLabel("Windows Vista", self)
 
         comboBox = QtWidgets.QComboBox(self)
-        comboBox.addItem("motif")
-        comboBox.addItem("Windows")
-        comboBox.addItem("cde")
-        comboBox.addItem("Plastique")
-        comboBox.addItem("Cleanlooks")
+        comboBox.addItem("Fusion")
+        comboBox.addItem("Windows")        
         comboBox.addItem("windowsvista")
 
         comboBox.move(50, 250)
