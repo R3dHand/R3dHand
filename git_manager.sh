@@ -3,39 +3,39 @@ timestamp=$(date)
 BASHDIR=$(pwd)
 
 #change dir for testing
-pushd /mnt/c/Users/corey/Corey-All-
+cd /mnt/c/Users/corey/Corey-All-/R3dHand
 
 for repository in $(dirname $(find . -name "*.git" ! -path "./gitBackup/*")); do
 
+    pushd ${repository}
     #PROMPT
     echo ==============================
     echo STATUS for ${repository}
     echo ==============================
 
-    git -C ${repository} status
+    git status
 
     read command
     while [[ ! "${command}" == "" ]]; do
+        #statements
+        cmd.exe /c git $(echo ${command})
 
-        #PROMPT
         echo ==============================
         echo STATUS for ${repository}
         echo ==============================
 
-        #statements
-        #git -C ${repository} $(echo ${command})
-        echo ${repository}
-        echo ${command}
+        git status
 
         read command
     done
+    popd
 done
 
 echo DONE
 echo ${timestamp}
 
 #return to bash directory
-popd
+cd ${BASHDIR}
 
 #add variables that need to be unset
 unset dir timestamp command
